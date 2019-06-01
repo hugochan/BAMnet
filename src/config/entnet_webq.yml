@@ -1,0 +1,47 @@
+# Seed 15 Data
+name: 'webq_seed_15_plus'
+data_dir: '../data/WebQ_entclf_delex_seed_15_fullvocab_plus/'
+train_data: 'train_seed_15_ent_vec.json'
+valid_data: 'valid_seed_15_ent_vec.json'
+test_data: 'test_seed_2_ent_vec_smart.json'
+
+# Full vocab
+vocab_size: 100797
+num_ent_types: 1712
+num_relations: 4996
+pre_word2vec: '../data/WebQ_entclf_delex_seed_15_fullvocab_plus/glove_pretrained_300d_w2v.npy'
+
+
+# Output
+model_file: '../runs/WebQ_entclf/best/entnet_seed_15_simpleatt_0.898.md.final'
+
+
+# Model
+query_size: 32
+max_seed_ent_name_size: null
+max_seed_type_name_size: null
+max_seed_rel_name_size: null
+max_seed_rel_size: null
+
+vocab_embed_size: 300
+hidden_size: 128
+o_embed_size: 128
+word_emb_dropout: 0.3
+que_enc_dropout: 0.3
+ent_enc_dropout: 0.2
+attention: 'simple'
+seq_enc_type: 'cnn'
+num_ent_hops: 1
+
+# Training
+learning_rate: 0.001
+batch_size: 32
+num_epochs: 100
+valid_patience: 10
+
+# Testing
+test_batch_size: 1
+
+# Device
+no_cuda: False
+gpu: 0
