@@ -24,13 +24,14 @@ Code accompanying the paper ["Bidirectional Attentive Memory Networks for Questi
 
 # Reference
 
-If you found this code useful, please cite the following paper:
+If you found this code useful, please consider citing the following paper:
 
 Yu Chen, Lingfei Wu, Mohammed J. Zaki. **"Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases."** *In Proc. 2019 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT2019). June 2019.*
 
-@article{chen2019bidirectional,
-  title={Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases},
-  author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed J},
-  journal={arXiv preprint arXiv:1903.02188},
-  year={2019}
-}
+
+	@article{chen2019bidirectional,
+	  title={Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases},
+	  author={Chen, Yu and Wu, Lingfei and Zaki, Mohammed J},
+	  journal={arXiv preprint arXiv:1903.02188},
+	  year={2019}
+	}
