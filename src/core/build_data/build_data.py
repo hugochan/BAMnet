@@ -17,7 +17,6 @@ from ..utils.freebase_utils import if_filterout
 from .. import config
 
 
-Obser_Count = 500
 IGNORE_DUMMY = True
 ENT_TYPE_HOP = 1
 # Entity mention types: 'NP', 'ORGANIZATION', 'DATE', 'NUMBER', 'MISC', 'ORDINAL', 'DURATION', 'PERSON', 'TIME', 'LOCATION'
@@ -282,8 +281,6 @@ def build_ans_cands(graph, entity2id, entityType2id, relation2id, vocab2id):
     for each in graph['alias']:
         cand_ans_topic_key_type.append([topic_key_ent_type_bows, topic_key_ent_type])
         ent_bow = [vocab2id[y] if y in vocab2id else config.RESERVED_TOKENS['UNK'] for y in tokenize(each.lower())]
-        if len(ent_bow) > Obser_Count:
-            import pdb;pdb.set_trace()
         cand_ans_bows.append(ent_bow)
         cand_ans_entities.append(config.RESERVED_ENTS['PAD'])
         cand_ans_types.append([])
@@ -305,8 +302,6 @@ def build_ans_cands(graph, entity2id, entityType2id, relation2id, vocab2id):
             if isinstance(nbr, str):
                 cand_ans_topic_key_type.append([topic_key_ent_type_bows, topic_key_ent_type])
                 ent_bow = [vocab2id[y] if y in vocab2id else config.RESERVED_TOKENS['UNK'] for y in tokenize(nbr.lower())]
-                if len(ent_bow) > Obser_Count:
-                    import pdb;pdb.set_trace()
                 cand_ans_bows.append(ent_bow)
                 cand_ans_entities.append(config.RESERVED_ENTS['PAD'])
                 cand_ans_types.append([])
@@ -346,8 +341,6 @@ def build_ans_cands(graph, entity2id, entityType2id, relation2id, vocab2id):
                 if not IGNORE_DUMMY or len(selected_names) > 0: # Otherwise, it is an intermediate (dummpy) node
                     cand_ans_topic_key_type.append([topic_key_ent_type_bows, topic_key_ent_type])
                     nbr_k_bow = [vocab2id[y] if y in vocab2id else config.RESERVED_TOKENS['UNK'] for x in selected_names for y in tokenize(x.lower())]
-                    if len(nbr_k_bow) > Obser_Count:
-                        import pdb;pdb.set_trace()
                     cand_ans_bows.append(nbr_k_bow)
                     cand_ans_entities.append(entity2id[nbr_k] if nbr_k in entity2id else config.RESERVED_ENTS['UNK'])
                     selected_types = (nbr_v['notable_types'] + nbr_v['type'])[:ENT_TYPE_HOP]
@@ -375,8 +368,6 @@ def build_ans_cands(graph, entity2id, entityType2id, relation2id, vocab2id):
                         if isinstance(nbr_nbr, str):
                             cand_ans_topic_key_type.append([topic_key_ent_type_bows, topic_key_ent_type])
                             ent_bow = [vocab2id[y] if y in vocab2id else config.RESERVED_TOKENS['UNK'] for y in tokenize(nbr_nbr.lower())]
-                            if len(ent_bow) > Obser_Count:
-                                import pdb;pdb.set_trace()
                             cand_ans_bows.append(ent_bow)
                             cand_ans_entities.append(config.RESERVED_ENTS['PAD'])
                             cand_ans_types.append([])
@@ -418,8 +409,6 @@ def build_ans_cands(graph, entity2id, entityType2id, relation2id, vocab2id):
                             if not IGNORE_DUMMY or len(selected_names) > 0:
                                 cand_ans_topic_key_type.append([topic_key_ent_type_bows, topic_key_ent_type])
                                 ent_bow = [vocab2id[y] if y in vocab2id else config.RESERVED_TOKENS['UNK'] for x in selected_names for y in tokenize(x.lower())]
-                                if len(ent_bow) > Obser_Count:
-                                    import pdb;pdb.set_trace()
                                 cand_ans_bows.append(ent_bow)
                                 cand_ans_entities.append(entity2id[nbr_nbr_k] if nbr_nbr_k in entity2id else config.RESERVED_ENTS['UNK'])
                                 selected_types = (nbr_nbr_v['notable_types'] + nbr_nbr_v['type'])[:ENT_TYPE_HOP]

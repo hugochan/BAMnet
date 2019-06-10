@@ -18,6 +18,3 @@ topic_mention_types = {'person', 'organization', 'location', 'misc'}
 # delex_mention_types = {'date', 'time', 'ordinal', 'number'}
 delex_mention_types = {'date', 'ordinal', 'number'}
 constraint_mention_types = delex_mention_types
-
-# Entnet entity mention types
-# entnet_delex_mention_types = {'date', 'time', 'ordinal', 'number'}

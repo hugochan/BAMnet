@@ -1,10 +1,10 @@
 # Seed 15 Data
-name: 'webq_seed_15'
-data_dir: '../data/WebQ_entclf_delex_seed_15_fullvocab_plus/'
-train_data: 'train_vec_notime.json'
-valid_data: 'valid_vec_notime.json'
-test_data: 'test_vec_notime.json'
-pre_word2vec: '../data/WebQ_entclf_delex_seed_15_fullvocab_plus/glove_pretrained_300d_w2v.npy'
+name: 'WebQuestions'
+data_dir: '../data/WebQ/'
+train_data: 'train_vec.json'
+valid_data: 'valid_vec.json'
+test_data: 'test_vec.json'
+pre_word2vec: '../data/WebQ/glove_pretrained_300d_w2v.npy'
 
 # Full vocab
 vocab_size: 100797
@@ -14,7 +14,7 @@ num_relations: 4996
 num_query_words: 10
 
 # Output
-model_file: '../runs/WebQ_entclf/best/bamnet_seed_15_fullvocab_delex_plus_notime_0.557.md'
+model_file: '../runs/WebQ/bamnet.md'
 
 # Model
 query_size: 32

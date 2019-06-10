@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     # Build data in real time
     freebase = load_ndjson(os.path.join(cfg['raw_data_dir'], 'freebase_full.json'), return_type='dict')
-    test_data = load_ndjson(os.path.join(cfg['raw_data_dir'], 'test_seed_2_smart.json'))
+    test_data = load_ndjson(os.path.join(cfg['raw_data_dir'], 'raw_test.json'))
     data_vec = build_data(test_data, freebase, entity2id, entityType2id, relation2id, vocab2id, pred_seed_ents=pred_seed_ents)
 
     queries, raw_queries, query_mentions, memories, cand_labels, _, gold_ans_labels = data_vec
