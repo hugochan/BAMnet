@@ -15,12 +15,12 @@ RESERVED_TOKENS = {'PAD': 0, 'UNK': 1}
 
 
 def built(path, version_string=None):
-    """Checks if '.built' flag has been set for that task.
+    """Checks if 'built.log' flag has been set for that task.
     If a version_string is provided, this has to match, or the version
     is regarded as not built.
     """
     if version_string:
-        fname = os.path.join(path, '.built')
+        fname = os.path.join(path, 'built.log')
         if not os.path.isfile(fname):
             return False
         else:
@@ -28,13 +28,13 @@ def built(path, version_string=None):
                 text = read.read().split('\n')
             return (len(text) > 1 and text[1] == version_string)
     else:
-        return os.path.isfile(os.path.join(path, '.built'))
+        return os.path.isfile(os.path.join(path, 'built.log'))
 
 def mark_done(path, version_string=None):
-    """Marks the path as done by adding a '.built' file with the current
+    """Marks the path as done by adding a 'built.log' file with the current
     timestamp plus a version description string if specified.
     """
-    with open(os.path.join(path, '.built'), 'w') as write:
+    with open(os.path.join(path, 'built.log'), 'w') as write:
         write.write(str(datetime.datetime.today()))
         if version_string:
             write.write('\n' + version_string)
