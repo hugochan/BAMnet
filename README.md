@@ -38,7 +38,7 @@ Please take the following steps to create a python virtual environment.
 	```
 	
 
-*  Test the BAMnet model
+*  Test the BAMnet model (with ground-truth topic entity)
 	
 	```
 	python test.py -config config/bamnet_webq.yml
@@ -64,7 +64,7 @@ Please take the following steps to create a python virtual environment.
 
 
 
-<!--### Preprocess the dataset on your own
+### Preprocess the dataset on your own
 
 * Go to the `BAMnet/src` folder, to prepare data for the BAMnet model, run the following cmd:
 
@@ -95,7 +95,7 @@ Please take the following steps to create a python virtual environment.
 	```
 	python build_pretrained_w2v.py -emb glove.840B.300d.w2v -data_dir ../data/WebQ -out ../data/WebQ/glove_pretrained_300d_w2v.npy -emb_size 300
 	```
--->
+
 
 
 
