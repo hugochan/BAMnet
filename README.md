@@ -1,7 +1,7 @@
 # BAMnet
 
 
-Code accompanying the paper ["Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases"](https://arxiv.org/abs/1903.02188)
+Code & data accompanying the NAACL2019 paper ["Bidirectional Attentive Memory Networks for Question Answering over Knowledge Bases"](https://arxiv.org/abs/1903.02188)
 
 
 ## Get started
