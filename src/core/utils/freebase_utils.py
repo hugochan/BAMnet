@@ -4,7 +4,7 @@ Created on Oct, 2017
 @author: hugo
 
 '''
-from fuzzywuzzy import fuzz, process
+from rapidfuzz import fuzz, process
 
 
 def if_filterout(s):

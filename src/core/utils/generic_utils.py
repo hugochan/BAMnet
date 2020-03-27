@@ -6,7 +6,7 @@ Created on Oct, 2017
 '''
 import re, string
 import numpy as np
-from fuzzywuzzy import fuzz, process
+from rapidfuzz import fuzz, process
 from nltk.corpus import stopwords
 
 from .utils import dump_ndarray, tokenize
