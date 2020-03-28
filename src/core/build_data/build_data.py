@@ -8,7 +8,7 @@ import os
 import math
 import argparse
 from itertools import count
-from fuzzywuzzy import fuzz, process
+from rapidfuzz import fuzz, process
 from collections import defaultdict
 
 from ..utils.utils import *
