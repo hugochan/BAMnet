@@ -2,6 +2,6 @@ rapidfuzz==0.3.0
 gensim==3.5.0
 nltk==3.4.5
 numpy==1.14.5
-PyYAML==5.1
+PyYAML==5.4
 torch==0.4.1
 
